@@ -17,6 +17,7 @@ PUT: localhost:5001/api/categories/:id
 DELETE: localhost:5001/api/categories/:id
 ===============================================================
 
+
 Products:
 =========
 
@@ -39,4 +40,28 @@ PUT: localhost:5001/api/products/:productId
 
 DELETE: localhost:5001/api/products/:productId
 
+===============================================================
+
+User:
+======
+
+POST: http://localhost:5001/api/users/register
+{
+  "username": "Raj",
+  "email": "ssraj74@gmail.com",
+  "password": "12345",
+  "address": "11-ML, NY",
+  "phone": "404 344 1111"
+}
+
+POST: http://localhost:5001/api/users/login
+{
+  "email": "ssraj74@gmail.com",
+  "password": "12345"
+}
+
+Note: User will get a token when they login, that can be sent when they want to view user profile, order products, update/delete products
+
+GET: http://localhost:5001/api/users/
+NOTE: Bearer Token needs to be sent along with request inorder to view the User info
 
