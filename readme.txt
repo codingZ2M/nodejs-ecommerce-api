@@ -63,12 +63,31 @@ POST: http://localhost:5001/api/users/login
 Note: User will get a token when they login, that can be sent when they want to view user profile, order products, update/delete products
 
 GET: http://localhost:5001/api/users/
-NOTE: Bearer Token needs to be sent along with request inorder to view the User info
+NOTE: User's Bearer Token needs to be sent along with request inorder to view the User info
 ===============================================================
 
 
 Order:
 =======
+
+POST: http://localhost:5001/api/orders
+{
+  "user_id": "6412da89e5eec07910ebf31d",
+  "title": "",
+  "qty": 3,
+  "size": 7,
+  "color": "Black",
+  "product_id": "6412cc48e5eec07910ebf310",
+  "category_id": "641294cae5eec07910ebf304"
+}
+NOTE: User's Bearer Token needs to be sent along with request inorder to order product
+
+
+GET: http://localhost:5001/api/orders/user
+NOTE: User's Bearer Token needs to be sent along with request inorder to view all the orders of a specific User
+
+
+
 
 
 
