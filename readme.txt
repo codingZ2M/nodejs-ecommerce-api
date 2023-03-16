@@ -64,4 +64,13 @@ Note: User will get a token when they login, that can be sent when they want to 
 
 GET: http://localhost:5001/api/users/
 NOTE: Bearer Token needs to be sent along with request inorder to view the User info
+===============================================================
+
+
+Order:
+=======
+
+
+
+
 
