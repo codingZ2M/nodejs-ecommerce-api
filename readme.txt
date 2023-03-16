@@ -29,3 +29,14 @@ POST: localhost:5001/api/products
   "category_id": "641294cae5eec07910ebf304"
 }
 
+GET: localhost:5001/api/products
+
+GET: localhost:5001/api/products/category/:category_id
+
+GET: localhost:5001/api/products/:productId
+
+PUT: localhost:5001/api/products/:productId
+
+DELETE: localhost:5001/api/products/:productId
+
+
