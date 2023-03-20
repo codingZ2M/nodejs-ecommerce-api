@@ -7,7 +7,7 @@ POST: localhost:5001/api/categories
 
 GET: localhost:5001/api/categories
 
-GET: localhost:5001/api/categories/:id
+GET: localhost:5001/api/categories/:categoryId
 
 PUT: localhost:5001/api/categories/:id
 {
