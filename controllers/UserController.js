@@ -66,7 +66,7 @@ const loginUser = asyncHandler(async  (req,res) => {
 
 
 //@desc Get User
-//@route GET /api/users/:id
+//@route GET /api/users/
 //@access private
 const getUser = asyncHandler(async (req, res) => {
     const user = await User.findById(req.user.id);

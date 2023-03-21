@@ -20,6 +20,9 @@ app.use(logger);
 
 // Using middlewares with 'app.use()'
 app.use(express.json());  // Middleware for Body parsing
+
+app.use("/api/categories", require("./routes/categoryRoutes")); //middleware
+
 app.use("/api/products", require("./routes/productRoutes")); //middleware
 
 app.use("/api/orders", require("./routes/orderRoutes")); //middleware

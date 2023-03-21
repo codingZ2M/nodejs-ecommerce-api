@@ -36,7 +36,7 @@ const getCategory = asyncHandler(async (req, res) => {
     throw new Error("Category Not Found!");
   }
     res.status(200).json(category);
-    });
+});
 
 //@desc Update Category
 //@route PUT /api/categories/:id

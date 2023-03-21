@@ -1,7 +1,7 @@
 {
   "name": "products-manager",
   "version": "1.0.0",
-  "description": "Product Manager Node.js REST API with Express MongoDB & Mongoose to manage products",
+  "description": "E-Commerce API Node.js REST API with Express MongoDB & Mongoose to manage products",
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
