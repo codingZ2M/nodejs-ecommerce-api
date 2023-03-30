@@ -1,5 +1,6 @@
 const asyncHandler = require("express-async-handler");
 const Product = require("../models/ProductModel");
+const Category = require("../models/CategoryModel");
 
 //@desc Get all Products
 //@route GET /api/products
@@ -23,6 +24,13 @@ const getProductsByCategory = asyncHandler(async (req, res) => {
 //@access private
 const createProduct = asyncHandler(async (req, res) => {
   const {title, desc, price, stock, category_id} = req.body;
+
+  // Check if category exists
+  const category = await Category.findById(category_id);
+  if (!category) {
+    return res.status(404).json({ error: 'Category not found to add a product!' });
+  }
+   
   if(!title || !desc || !price || !stock ||!category_id) {
    res.status(400);
    throw new Error("All Fileds Are Mandatory!");
@@ -32,10 +40,10 @@ const createProduct = asyncHandler(async (req, res) => {
      desc,
      price,
      stock,
-     category_id: category_id,
+     category_id,
    })
    res.status(200).json(product);
-   });
+});
 
 
 //@desc Get Product

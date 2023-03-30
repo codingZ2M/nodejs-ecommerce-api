@@ -4,10 +4,10 @@ const Category = require("../models/CategoryModel");
 //@desc Get all Categories
 //@route GET /api/categories
 //@access private
-const getCategories = asyncHandler(async (req, res) => {
+const getCategories = asyncHandler(  async (req, res) => {
   const categories = await Category.find();
   res.status(200).json(categories);
-  });
+  }  );
 
 
 //@desc Create new Category
